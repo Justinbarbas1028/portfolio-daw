@@ -48,19 +48,25 @@
                     role="tablist"
                     aria-label="Journey sections"
                 >
+                    <!-- <button
+                        class="journey-tab is-active"
+                        type="button"
+                        role="tab"
+                        id="journey-tab-experience"
+                        aria-controls="journey-panel-experience"
+                        aria-selected="true"
+                        data-target="experience"
+                    >
+                        Experience
+                    </button> -->
                     <button
                         class="journey-tab is-active"
                         type="button"
                         role="tab"
+                        id="journey-tab-education"
+                        aria-controls="journey-panel-education"
                         aria-selected="true"
-                    >
-                        Experience
-                    </button>
-                    <button
-                        class="journey-tab"
-                        type="button"
-                        role="tab"
-                        aria-selected="false"
+                        data-target="education"
                     >
                         Education
                     </button>
@@ -68,75 +74,209 @@
                         class="journey-tab"
                         type="button"
                         role="tab"
+                        id="journey-tab-achievements"
+                        aria-controls="journey-panel-achievements"
                         aria-selected="false"
+                        data-target="achievements"
                     >
                         Achievements
                     </button>
                 </div>
 
-                <div class="journey-timeline reveal reveal-delay-3">
-                    <article class="journey-item">
-                        <div class="journey-left">
-                            <span class="journey-date">Dec 2023 - Present</span>
-                            <h2>Frontend Developer</h2>
-                            <p class="journey-company">Solspro</p>
-                        </div>
-
-                        <div class="journey-marker" aria-hidden="true"></div>
-
-                        <div class="journey-right">
-                            <p>
-                                Developed fully responsive websites, dashboards,
-                                and landing pages from scratch. Worked on CMS
-                                platforms such as WordPress and Shopify
-                                (including custom Liquid development), and
-                                created pixel-perfect designs on Wix and
-                                Squarespace.
-                            </p>
-                            <div class="journey-tags">
-                                <span>HTML5</span>
-                                <span>CSS3</span>
-                                <span>JavaScript</span>
-                                <span>Bootstrap</span>
-                                <span>Tailwind CSS</span>
-                                <span>WordPress</span>
-                                <span>Shopify</span>
-                                <span>Git</span>
+                <div
+                    class="journey-panel"
+                    id="journey-panel-experience"
+                    role="tabpanel"
+                    aria-labelledby="journey-tab-experience"
+                    hidden
+                >
+                    <!-- <div class="journey-timeline reveal reveal-delay-3">
+                        <article class="journey-item">
+                            <div class="journey-left">
+                                <span class="journey-date"
+                                    >Dec 2023 - Present</span
+                                >
+                                <h2>Frontend Developer</h2>
+                                <p class="journey-company">Solspro</p>
                             </div>
-                        </div>
-                    </article>
 
-                    <article class="journey-item">
-                        <div class="journey-left">
-                            <span class="journey-date"
-                                >Aug 2023 - Dec 2023</span
-                            >
-                            <h2>Web Developer Internship</h2>
-                            <p class="journey-company">Solspro</p>
-                        </div>
+                            <div
+                                class="journey-marker"
+                                aria-hidden="true"
+                            ></div>
 
-                        <div class="journey-marker" aria-hidden="true"></div>
-
-                        <div class="journey-right">
-                            <p>
-                                Supported front-end development tasks by
-                                converting Figma/PSD designs to HTML,
-                                customizing CMS themes, and implementing
-                                responsive features. Gained practical experience
-                                in UI/UX improvements and cross-browser
-                                compatibility.
-                            </p>
-                            <div class="journey-tags">
-                                <span>HTML5</span>
-                                <span>CSS3</span>
-                                <span>JavaScript</span>
-                                <span>jQuery</span>
-                                <span>WordPress</span>
-                                <span>Figma</span>
-                                <span>Responsive Design</span>
+                            <div class="journey-right">
+                                <p>
+                                    Developed fully responsive websites,
+                                    dashboards, and landing pages from scratch.
+                                    Worked on CMS platforms such as WordPress
+                                    and Shopify (including custom Liquid
+                                    development), and created pixel-perfect
+                                    designs on Wix and Squarespace.
+                                </p>
+                                <div class="journey-tags">
+                                    <span>HTML5</span>
+                                    <span>CSS3</span>
+                                    <span>JavaScript</span>
+                                    <span>Bootstrap</span>
+                                    <span>Tailwind CSS</span>
+                                    <span>WordPress</span>
+                                    <span>Shopify</span>
+                                    <span>Git</span>
+                                </div>
                             </div>
-                        </div>
-                    </article>
+                        </article>
+
+                        <article class="journey-item">
+                            <div class="journey-left">
+                                <span class="journey-date"
+                                    >Aug 2023 - Dec 2023</span
+                                >
+                                <h2>Web Developer Internship</h2>
+                                <p class="journey-company">Solspro</p>
+                            </div>
+
+                            <div
+                                class="journey-marker"
+                                aria-hidden="true"
+                            ></div>
+
+                            <div class="journey-right">
+                                <p>
+                                    Supported front-end development tasks by
+                                    converting Figma/PSD designs to HTML,
+                                    customizing CMS themes, and implementing
+                                    responsive features. Gained practical
+                                    experience in UI/UX improvements and
+                                    cross-browser compatibility.
+                                </p>
+                                <div class="journey-tags">
+                                    <span>HTML5</span>
+                                    <span>CSS3</span>
+                                    <span>JavaScript</span>
+                                    <span>jQuery</span>
+                                    <span>WordPress</span>
+                                    <span>Figma</span>
+                                    <span>Responsive Design</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div> -->
+                </div>
+
+                <div
+                    class="journey-panel is-active"
+                    id="journey-panel-education"
+                    role="tabpanel"
+                    aria-labelledby="journey-tab-education"
+                >
+                    <div class="journey-timeline">
+                        <article class="journey-item">
+                            <div class="journey-left">
+                                <span class="journey-date">2022 - Present</span>
+                                <h2>
+                                    Bachelor of Science in Information
+                                    Technology
+                                </h2>
+                                <p class="journey-company">
+                                    Cavite State University - Bacoor Campus
+                                </p>
+                            </div>
+
+                            <div
+                                class="journey-marker"
+                                aria-hidden="true"
+                            ></div>
+
+                            <div class="journey-right">
+                                <p>
+                                    Completed core and advanced coursework in
+                                    software engineering, web development,
+                                    database systems, and systems analysis with
+                                    strong project-based outputs.
+                                </p>
+                                <div class="journey-tags">
+                                    <span>Capstone Project</span>
+                                    <span>Web Development</span>
+                                    <span>Database Design</span>
+                                    <span>UI/UX</span>
+                                    <span>Software Engineering</span>
+                                    <span>AI Automation</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="journey-item">
+                            <div class="journey-left">
+                                <span class="journey-date">2020 - 2022</span>
+                                <h2>Senior High School (ICT-TVL)</h2>
+                                <p class="journey-company">
+                                    SHS in San Nicolas 3
+                                </p>
+                            </div>
+
+                            <div
+                                class="journey-marker"
+                                aria-hidden="true"
+                            ></div>
+
+                            <div class="journey-right">
+                                <p>
+                                    Built a strong foundation in mathematics,
+                                    logic, and analytical thinking while
+                                    participating in technology-focused school
+                                    activities and practical projects.
+                                </p>
+                                <div class="journey-tags">
+                                    <span>STEM</span>
+                                    <span>Research</span>
+                                    <span>Problem Solving</span>
+                                    <span>Teamwork</span>
+                                    <span>Hardware Skill</span>
+                                    <span>Networking</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div
+                    class="journey-panel"
+                    id="journey-panel-achievements"
+                    role="tabpanel"
+                    aria-labelledby="journey-tab-achievements"
+                    hidden
+                >
+                    <div class="journey-timeline">
+                        <article class="journey-item">
+                            <div class="journey-left">
+                                <span class="journey-date">Milestone</span>
+                                <h2>Top Project Delivery</h2>
+                                <p class="journey-company">
+                                    Portfolio Highlight
+                                </p>
+                            </div>
+
+                            <div
+                                class="journey-marker"
+                                aria-hidden="true"
+                            ></div>
+
+                            <div class="journey-right">
+                                <p>
+                                    Delivered multiple responsive and
+                                    production-ready projects with consistent UI
+                                    quality, performance optimization, and
+                                    reusable component structures.
+                                </p>
+                                <div class="journey-tags">
+                                    <span>Performance</span>
+                                    <span>Accessibility</span>
+                                    <span>Reusable Components</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
                 </div>
             </div>
         </section>
