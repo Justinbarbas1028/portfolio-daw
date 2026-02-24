@@ -17,6 +17,7 @@
         />
     </head>
     <body>
+        <!-- Navigation -->
         <nav class="main-nav">
             <div class="logo">Logo Here</div>
             <div class="navigation-link">
@@ -29,14 +30,115 @@
             </div>
         </nav>
 
-        <section class="about">
-            <h1 class="reveal">ABOUT PAGE</h1>
-            <p class="reveal reveal-delay-1">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
-                unde modi repellat. Doloribus esse tempore odio necessitatibus
-                ratione, fugit, ab labore obcaecati harum dignissimos non? Velit
-                quibusdam quam commodi maiores.
-            </p>
+        <section id="about" class="about-journey">
+            <div class="about-journey-wrap">
+                <span class="journey-pill reveal">My Journey</span>
+
+                <h1 class="journey-title reveal reveal-delay-1">
+                    Professional <span>Experience</span>
+                </h1>
+
+                <p class="journey-description reveal reveal-delay-2">
+                    A timeline of my career path and the valuable experiences
+                    that have shaped my expertise.
+                </p>
+
+                <div
+                    class="journey-tabs reveal reveal-delay-2"
+                    role="tablist"
+                    aria-label="Journey sections"
+                >
+                    <button
+                        class="journey-tab is-active"
+                        type="button"
+                        role="tab"
+                        aria-selected="true"
+                    >
+                        Experience
+                    </button>
+                    <button
+                        class="journey-tab"
+                        type="button"
+                        role="tab"
+                        aria-selected="false"
+                    >
+                        Education
+                    </button>
+                    <button
+                        class="journey-tab"
+                        type="button"
+                        role="tab"
+                        aria-selected="false"
+                    >
+                        Achievements
+                    </button>
+                </div>
+
+                <div class="journey-timeline reveal reveal-delay-3">
+                    <article class="journey-item">
+                        <div class="journey-left">
+                            <span class="journey-date">Dec 2023 - Present</span>
+                            <h2>Frontend Developer</h2>
+                            <p class="journey-company">Solspro</p>
+                        </div>
+
+                        <div class="journey-marker" aria-hidden="true"></div>
+
+                        <div class="journey-right">
+                            <p>
+                                Developed fully responsive websites, dashboards,
+                                and landing pages from scratch. Worked on CMS
+                                platforms such as WordPress and Shopify
+                                (including custom Liquid development), and
+                                created pixel-perfect designs on Wix and
+                                Squarespace.
+                            </p>
+                            <div class="journey-tags">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                                <span>Bootstrap</span>
+                                <span>Tailwind CSS</span>
+                                <span>WordPress</span>
+                                <span>Shopify</span>
+                                <span>Git</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="journey-item">
+                        <div class="journey-left">
+                            <span class="journey-date"
+                                >Aug 2023 - Dec 2023</span
+                            >
+                            <h2>Web Developer Internship</h2>
+                            <p class="journey-company">Solspro</p>
+                        </div>
+
+                        <div class="journey-marker" aria-hidden="true"></div>
+
+                        <div class="journey-right">
+                            <p>
+                                Supported front-end development tasks by
+                                converting Figma/PSD designs to HTML,
+                                customizing CMS themes, and implementing
+                                responsive features. Gained practical experience
+                                in UI/UX improvements and cross-browser
+                                compatibility.
+                            </p>
+                            <div class="journey-tags">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                                <span>jQuery</span>
+                                <span>WordPress</span>
+                                <span>Figma</span>
+                                <span>Responsive Design</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
         </section>
         <div id="footer-placeholder"></div>
         <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>

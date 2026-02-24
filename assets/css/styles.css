@@ -114,7 +114,7 @@ nav .logo {
 .navigation-link a:focus-visible {
     transform: translate(-2px, -2px);
     box-shadow: 6px 6px 0 #000;
-    background-color: #ffe44d;
+    background-color: #fff2a8;
     color: #111;
 }
 
@@ -157,6 +157,210 @@ section {
     margin-top: 1rem;
 }
 
+.about-journey {
+    min-height: 100vh;
+    background: #f8fafc;
+    color: #111827;
+    padding: 3rem 1.25rem 4.5rem;
+}
+
+.about-journey-wrap {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.journey-pill {
+    display: inline-block;
+    background: #fff;
+    color: #111827;
+    border: 3px solid #000;
+    box-shadow: 4px 4px 0 #ff4d4d;
+    border-radius: 9999px;
+    padding: 0.35rem 0.95rem;
+    font-size: 0.9rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.journey-title {
+    font-size: clamp(1.9rem, 4vw, 3rem);
+    line-height: 1.1;
+    font-weight: 900;
+    letter-spacing: 0.01em;
+    margin-bottom: 1rem;
+}
+
+.journey-title span {
+    color: #ff4d4d;
+}
+
+.journey-description {
+    max-width: 720px;
+    font-size: 1.08rem;
+    color: #374151;
+    margin-bottom: 1.8rem;
+}
+
+.journey-tabs {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 3px solid #000;
+    box-shadow: 5px 5px 0 #ff4d4d;
+    background: #ffffff;
+    border-radius: 9999px;
+    padding: 0.35rem;
+    margin-bottom: 2rem;
+}
+
+.journey-tab {
+    border: 2px solid transparent;
+    background: transparent;
+    color: #374151;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.95rem;
+}
+
+.journey-tab.is-active {
+    background: #f3f4f6;
+    color: #111;
+    border-color: #000;
+    box-shadow: 2px 2px 0 #000;
+}
+
+.journey-timeline {
+    position: relative;
+    display: grid;
+    gap: 2rem;
+}
+
+.journey-timeline::before {
+    content: '';
+    position: absolute;
+    left: 43.8%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #e5e7eb;
+    border: 2px solid #000;
+    box-shadow: 3px 3px 0 #ff4d4d;
+}
+
+.journey-item {
+    display: grid;
+    grid-template-columns: 1fr 48px 1.3fr;
+    gap: 1rem;
+    align-items: start;
+}
+
+.journey-left {
+    text-align: right;
+    padding-right: 1rem;
+}
+
+.journey-date {
+    display: inline-block;
+    background: #fff;
+    color: #111;
+    border: 2px solid #000;
+    box-shadow: 3px 3px 0 #ff4d4d;
+    border-radius: 9999px;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.9rem;
+    font-weight: 800;
+    margin-bottom: 0.7rem;
+}
+
+.journey-left h2 {
+    font-size: clamp(1.25rem, 2.2vw, 2rem);
+    line-height: 1.2;
+    color: #111827;
+}
+
+.journey-company {
+    margin-top: 0.4rem;
+    color: #ff4d4d;
+    font-weight: 800;
+    font-size: 1.15rem;
+}
+
+.journey-marker {
+    width: 18px;
+    height: 18px;
+    background: #fff;
+    border: 3px solid #000;
+    border-radius: 999px;
+    box-shadow: 3px 3px 0 #ff4d4d;
+    margin: 0.6rem auto 0;
+    z-index: 2;
+}
+
+.journey-right {
+    background: #ffffff;
+    color: #111;
+    border: 4px solid #000;
+    box-shadow: 7px 7px 0 #ff4d4d;
+    padding: 1rem 1.1rem;
+}
+
+.journey-right p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.journey-tags {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.journey-tags span {
+    border: 2px solid #000;
+    background: #ffffff;
+    box-shadow: 2px 2px 0 #000;
+    padding: 0.25rem 0.6rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+@media (max-width: 900px) {
+    .about-journey {
+        padding: 2rem 1rem 3rem;
+    }
+
+    .journey-tabs {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        border-radius: 18px;
+    }
+
+    .journey-item {
+        grid-template-columns: 1fr;
+        gap: 0.85rem;
+    }
+
+    .journey-left {
+        text-align: left;
+        padding-right: 0;
+    }
+
+    .journey-timeline::before {
+        display: none;
+    }
+
+    .journey-marker {
+        margin: 0;
+    }
+
+    .journey-right {
+        box-shadow: 5px 5px 0 #8b5cf6;
+    }
+}
+
 /* Project Section */
 .project-section {
     padding: 4rem 3rem;
@@ -168,6 +372,7 @@ section {
     margin-left: auto;
     margin-right: auto;
     position: relative;
+    height: auto;
 }
 
 .project-title {
@@ -186,10 +391,16 @@ section {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    min-height: 35rem;
+    min-height: 30rem;
     border: 1px solid black;
 }
-    
+
+.project-card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
 .project-card:hover {
     box-shadow: 4px 4px 0 #000;
     transform: translate(-2px, -2px);
@@ -364,15 +575,17 @@ section {
 }
 
 .techstack {
-    padding: 0;
+    padding: 2.5rem 1.5rem;
     margin-bottom: 5rem;
+    background: #f3f4f6;
 }
 
 .techstack > .carousel {
     display: flex;
     overflow: hidden;
     position: relative;
-    border-block: 3px solid #111827;
+    border: 4px solid #111827;
+    box-shadow: 8px 8px 0 #111827;
     background: #f8fafc;
 }
 
@@ -387,14 +600,14 @@ section {
     will-change: transform;
     animation: scrolling 35s linear infinite;
     gap: 1.25rem;
-    padding: 1rem 1.25rem;
+    padding: 1.25rem;
 }
 
 .techstack .card {
     width: 170px;
     height: 110px;
     background: #ffffff;
-    border: 3px solid #111827;
+    border: 4px solid #111827;
     box-shadow: 6px 6px 0 #111827;
     color: #111827;
     border-radius: 0;
@@ -407,7 +620,8 @@ section {
 }
 
 .techstack .card:hover {
-    transform: translate(-2px, -2px);
+    transform: translate(-3px, -3px);
+    box-shadow: 9px 9px 0 #111827;
 }
 
 .techstack .carousel-icon {
@@ -435,46 +649,68 @@ section {
 
 .toolkit-section {
     min-height: 100vh;
-    padding: 2rem;
+    padding: 3rem 2rem;
+    background: #f3f4f6;
 }
 
 .toolkit-section > h3 {
     text-align: baseline;
+    display: inline-block;
     font-size: 2.25rem;
     font-weight: 900;
     line-height: 1.1;
     text-transform: uppercase;
     color: #000;
     margin-left: 1rem;
+    margin-bottom: 1.5rem;
+    background: #fff;
+    border: 4px solid #000;
+    box-shadow: 6px 6px 0 #000;
+    padding: 0.55rem 1rem;
 }
 
 .toolkit {
     text-align: justify;
     display: grid;
+    gap: 1rem;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
 }
 
 .toolkit > div {
     padding: 2rem;
-    border-top: 1px solid black;
-    border-left: 3px solid black;
-    margin: 1rem;
+    border: 4px solid #000;
+    box-shadow: 6px 6px 0 #000;
+    margin: 0;
+    background: #fff;
 }
 
 .toolkit > div:hover {
-    background-color: #e1e1e1;
-    transition: 0.5s;
+    background-color: #fff2a8;
+    transform: translate(-3px, -3px);
+    box-shadow: 9px 9px 0 #000;
+    transition: 0.2s ease;
 }
 
 .toolkit h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    font-weight: bold;
+    font-weight: 800;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    border-left: 4px solid #000;
+    padding-left: 0.65rem;
 }
 
 .toolkit p {
-    margin-top: 1rem;
+    margin-top: 0.75rem;
+    border: 2px solid #000;
+    padding: 0.45rem 0.6rem;
+    background: #fff;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
 }
 
 .toolkit img {
@@ -484,6 +720,14 @@ section {
 }
 
 @media (max-width: 768px) {
+    .techstack {
+        padding: 1.5rem 0.75rem;
+    }
+
+    .techstack > .carousel {
+        box-shadow: 5px 5px 0 #111827;
+    }
+
     .toolkit-section {
         padding: 1.5rem 1rem;
     }
@@ -491,6 +735,7 @@ section {
     .toolkit-section > h3 {
         font-size: 1.5rem;
         margin-left: 0;
+        box-shadow: 4px 4px 0 #000;
     }
 
     .toolkit {
@@ -501,6 +746,7 @@ section {
     .toolkit > div {
         margin: 0.5rem 0;
         padding: 1.25rem;
+        box-shadow: 5px 5px 0 #000;
     }
 }
 
