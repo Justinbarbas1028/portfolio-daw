@@ -19,9 +19,12 @@ html {
     top: 0;
     background-color: aliceblue;
     z-index: 100;
+    border-bottom: 4px solid #000;
     transition:
         background-color 0.4s ease,
-        color 0.4s ease;
+        color 0.4s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
 }
 
 /* Per-section navbar colors */
@@ -35,7 +38,6 @@ html {
     color: #eee;
 }
 
-.main-nav.nav-about .navigation-link a,
 .main-nav.nav-about .logo {
     color: #eee;
 }
@@ -45,7 +47,6 @@ html {
     color: #fff;
 }
 
-.main-nav.nav-projects .navigation-link a,
 .main-nav.nav-projects .logo {
     color: #fff;
 }
@@ -55,7 +56,6 @@ html {
     color: #e0e0e0;
 }
 
-.main-nav.nav-skills .navigation-link a,
 .main-nav.nav-skills .logo {
     color: #e0e0e0;
 }
@@ -65,7 +65,6 @@ html {
     color: #fff;
 }
 
-.main-nav.nav-tools .navigation-link a,
 .main-nav.nav-tools .logo {
     color: #fff;
 }
@@ -75,32 +74,59 @@ html {
     color: #f5f5f5;
 }
 
-.main-nav.nav-contact .navigation-link a,
 .main-nav.nav-contact .logo {
     color: #f5f5f5;
 }
 
 nav .logo {
     font-size: 1.5rem;
-    font-weight: bold;
+    font-weight: 800;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
 }
 
 .navigation-link {
     display: flex;
-    gap: 1.5rem;
+    gap: 0.75rem;
+    flex-wrap: wrap;
 }
 
 .navigation-link a {
     text-decoration: none;
-    color: black;
-    font-size: 1.2rem;
-    font-weight: 500;
+    color: inherit;
+    background: #fff;
+    border: 3px solid #000;
+    box-shadow: 4px 4px 0 #000;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
     position: relative;
-    padding-bottom: 2px;
+    padding: 0.45rem 0.85rem;
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease,
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.navigation-link a:hover,
+.navigation-link a:focus-visible {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 #000;
+    background-color: #ffe44d;
+    color: #111;
+}
+
+.navigation-link a:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 #000;
 }
 
 .navigation-link a.nav-active {
-    border-bottom: 2px solid currentColor;
+    background-color: #000;
+    color: #fff;
+    box-shadow: 6px 6px 0 #ff4d4d;
 }
 
 section {
@@ -161,8 +187,13 @@ section {
     display: flex;
     flex-direction: column;
     min-height: 35rem;
-
     border: 1px solid black;
+}
+    
+.project-card:hover {
+    box-shadow: 4px 4px 0 #000;
+    transform: translate(-2px, -2px);
+    transition: all 0.2s ease;
 }
 
 .project-image-container {
