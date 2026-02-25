@@ -216,4 +216,108 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     }
+
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', sendMail);
+    }
 });
+
+function sendMail(event) {
+    if (event) {
+        event.preventDefault();
+    }
+
+    const contactForm = document.getElementById('contactForm');
+    if (!contactForm) {
+        return;
+    }
+
+    if (typeof emailjs === 'undefined') {
+        showContactNotice(
+            'Email service is not available right now. Please try again later.',
+            'error'
+        );
+        return;
+    }
+
+    const formData = new FormData(contactForm);
+    const fullName = (formData.get('name') || '').toString().trim();
+    const email = (formData.get('email') || '').toString().trim();
+    const message = (formData.get('message') || '').toString().trim();
+
+    const parms = {
+        name: fullName,
+        fullname: fullName,
+        from_name: fullName,
+        email: email,
+        from_email: email,
+        reply_to: email,
+        message: message,
+    };
+
+    emailjs
+        .send('service_j9nv15k', 'template_fyccbge', parms)
+        .then(() => {
+            showContactNotice('Message sent successfully.', 'success');
+            contactForm.reset();
+        })
+        .catch((error) => {
+            showContactNotice(
+                'Failed to send message. Please try again.',
+                'error'
+            );
+            console.error('EmailJS error:', {
+                status: error?.status,
+                text: error?.text,
+                details: error,
+            });
+        });
+}
+
+let contactNoticeTimeoutId = null;
+let contactNoticeCleanupTimeoutId = null;
+
+function showContactNotice(message, type) {
+    const contactForm = document.getElementById('contactForm');
+    if (!contactForm) {
+        return;
+    }
+
+    let notice = document.getElementById('contactNotice');
+
+    if (!notice) {
+        notice = document.createElement('div');
+        notice.id = 'contactNotice';
+        notice.className = 'cf-notice';
+        notice.setAttribute('role', 'status');
+        notice.setAttribute('aria-live', 'polite');
+        contactForm.prepend(notice);
+    }
+
+    notice.textContent = message;
+    notice.classList.remove('is-success', 'is-error', 'is-visible');
+    notice.classList.add(type === 'error' ? 'is-error' : 'is-success');
+
+    requestAnimationFrame(() => {
+        notice.classList.add('is-visible');
+    });
+
+    if (contactNoticeTimeoutId) {
+        clearTimeout(contactNoticeTimeoutId);
+    }
+
+    if (contactNoticeCleanupTimeoutId) {
+        clearTimeout(contactNoticeCleanupTimeoutId);
+    }
+
+    contactNoticeTimeoutId = setTimeout(() => {
+        notice.classList.remove('is-visible');
+
+        contactNoticeCleanupTimeoutId = setTimeout(() => {
+            if (!notice.classList.contains('is-visible')) {
+                notice.remove();
+            }
+        }, 220);
+    }, 4500);
+}

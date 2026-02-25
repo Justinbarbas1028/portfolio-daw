@@ -15,6 +15,17 @@
             href="https://fonts.googleapis.com/css2?family=Allkin&family=Archivo+Black&family=Oswald:wght@200..700&display=swap"
             rel="stylesheet"
         />
+        <script
+            type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+        ></script>
+        <script type="text/javascript">
+            (function () {
+                emailjs.init({
+                    publicKey: 'V0ldW5PP9LutqPAcJ',
+                });
+            })();
+        </script>
     </head>
     <body>
         <div class="nav-overlay" id="navOverlay"></div>
@@ -50,11 +61,7 @@
                     </p>
                 </div>
                 <div class="cf-card reveal reveal-delay-1">
-                    <form
-                        action="https://formbold.com/s/FORM_ID"
-                        method="POST"
-                        class="cf-form"
-                    >
+                    <form id="contactForm" class="cf-form">
                         <div class="cf-row">
                             <div class="cf-field">
                                 <label for="fullname" class="cf-label"
@@ -62,10 +69,11 @@
                                 >
                                 <input
                                     type="text"
-                                    name="fullname"
+                                    name="name"
                                     id="fullname"
                                     placeholder="John Doe"
                                     class="cf-input"
+                                    required
                                 />
                             </div>
                         </div>
@@ -80,6 +88,7 @@
                                     id="email"
                                     placeholder="john.doe@mail.com"
                                     class="cf-input"
+                                    required
                                 />
                             </div>
                         </div>
@@ -95,6 +104,7 @@
                                     id="message"
                                     placeholder="Write your message..."
                                     class="cf-input cf-textarea"
+                                    required
                                 ></textarea>
                             </div>
                         </div>
@@ -111,6 +121,6 @@
         <div id="footer-placeholder"></div>
 
         <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
-        <script src="assets/js/index.js"></script>
+        <script defer src="assets/js/index.js"></script>
     </body>
 </html>

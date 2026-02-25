@@ -13,5 +13,3 @@
 
 /*XXL devices (large monitors)*/
 @media (min-width: 1400px) { }
-
-

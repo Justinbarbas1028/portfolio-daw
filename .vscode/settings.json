@@ -8,5 +8,6 @@
   },
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "robotcode.disableExtension": true
 }

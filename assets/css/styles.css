@@ -1239,6 +1239,37 @@ section {
     gap: 0;
 }
 
+.cf-notice {
+    border: 2px solid #000;
+    box-shadow: 4px 4px 0 #000;
+    margin: 0 0 1rem;
+    padding: 0.8rem 1rem;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transform: translateY(-6px);
+    opacity: 0;
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.cf-notice.is-visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.cf-notice.is-success {
+    background: #d8ff5a;
+    color: #000;
+}
+
+.cf-notice.is-error {
+    background: #ff7575;
+    color: #000;
+}
+
 .cf-row {
     display: block;
     border-bottom: 2px solid #000;
