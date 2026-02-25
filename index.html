@@ -28,26 +28,34 @@
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     </head>
     <body>
+        <div class="nav-overlay" id="navOverlay"></div>
         <nav class="main-nav">
-            <div class="logo">Logo Here</div>
-            <div class="navigation-link">
+            <div class="logo">JUSTIN</div>
+            <div class="navigation-link" id="navLinks">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="projects.html">Project</a>
-                <a href="skills.html">Skill</a>
+                <!-- <a href="skills.html">Skill</a> -->
                 <a href="tools.html">Tools</a>
                 <a href="contact.html">Contact</a>
             </div>
+            <button
+                class="hamburger"
+                id="hamburger"
+                aria-label="Toggle menu"
+                aria-expanded="false"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
         <section id="home" class="main">
             <div class="main-container">
                 <div class="main-introduction">
-                    <h1>Hello!</h1>
+                    <h1 data-text="Hello!">Hello!</h1>
                     <h2>My Name is Justin</h2>
                     <h3>I am a Full Stack Developer</h3>
-                </div>
-                <div class="main-profile">
-
                 </div>
             </div>
         </section>
@@ -221,7 +229,9 @@
         <hr />
         <section id="projects" class="project-section">
             <div class="project-container">
-                <h2 class="project-title reveal">FEATURED PROJECTS</h2>
+                <h2 class="project-title reveal">
+                    FEATURED <span>PROJECTS</span>
+                </h2>
                 <p class="project-description reveal reveal-delay-1">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                     Eius similique neque ex. Molestias dignissimos, esse quis
@@ -237,32 +247,30 @@
                                 <div class="project-image-container">
                                     <img
                                         src="https://placehold.co/600x400/222/fff?text=Full+Circle+Event"
-                                        alt="Full Circle Event"
+                                        alt="Mobile Parenting Support Application"
                                         class="project-image"
                                     />
                                     <div class="project-badge">
-                                        Web Development
+                                        Mobile App Development
                                     </div>
                                 </div>
                                 <div class="project-content">
                                     <h3 class="project-card-title">
-                                        Full Circle Event
+                                        Mobile Parenting Support Application
                                     </h3>
                                     <p class="project-card-description">
-                                        A visually dynamic and fully responsive
-                                        WordPress website for Sheffield's
-                                        leading AV hire and event...
+                                        Developed a mobile application that
+                                        supports parents with childcare
+                                        guidance, nutrition tips, and parent
+                                        well-being resources.
                                     </p>
 
                                     <div class="project-tags">
+                                        <span class="project-tag">Dart</span>
+                                        <span class="project-tag">Flutter</span>
                                         <span class="project-tag"
-                                            >WordPress</span
+                                            >Firebase</span
                                         >
-                                        <span class="project-tag"
-                                            >Elementor</span
-                                        >
-                                        <span class="project-tag">HTML</span>
-                                        <span class="project-tag">+4</span>
                                     </div>
 
                                     <a href="#" class="project-link">
@@ -281,7 +289,7 @@
                                 <div class="project-image-container">
                                     <img
                                         src="https://placehold.co/600x400/222/fff?text=Icon+Codes"
-                                        alt="Icon Codes"
+                                        alt="School Website"
                                         class="project-image"
                                     />
                                     <div class="project-badge">
@@ -290,25 +298,24 @@
                                 </div>
                                 <div class="project-content">
                                     <h3 class="project-card-title">
-                                        Icon Codes
+                                        School Website
                                     </h3>
                                     <p class="project-card-description">
-                                        A modern and animated eCommerce website
-                                        built with WPBakery and the Salient
-                                        theme, specializin...
+                                        Designed and developed a school website
+                                        that provides essential school
+                                        information, announcements, and academic
+                                        details with student login
+                                        functionality.
                                     </p>
 
                                     <div class="project-tags">
+                                        <span class="project-tag">HTML</span>
+                                        <span class="project-tag">CSS</span>
                                         <span class="project-tag"
-                                            >WordPress</span
+                                            >JavaScript</span
                                         >
-                                        <span class="project-tag"
-                                            >WooCommerce</span
-                                        >
-                                        <span class="project-tag"
-                                            >WPBakery</span
-                                        >
-                                        <span class="project-tag">+3</span>
+                                        <span class="project-tag">Python</span>
+                                        <span class="project-tag">Django</span>
                                     </div>
 
                                     <a href="#" class="project-link">
@@ -327,7 +334,7 @@
                                 <div class="project-image-container">
                                     <img
                                         src="https://placehold.co/600x400/222/fff?text=Mullion+Glass+Studio"
-                                        alt="Mullion Glass Studio"
+                                        alt="Point of Sale System"
                                         class="project-image"
                                     />
                                     <div class="project-badge">
@@ -336,25 +343,18 @@
                                 </div>
                                 <div class="project-content">
                                     <h3 class="project-card-title">
-                                        Mullion Glass Studio
+                                        Point of Sale (POS) System
                                     </h3>
                                     <p class="project-card-description">
-                                        A colourful, artistic eCommerce
-                                        WordPress website showcasing handmade
-                                        fused glass art and creati...
+                                        Built a food point of sale system to
+                                        manage orders, calculate sales, and
+                                        process payments efficiently.
                                     </p>
 
                                     <div class="project-tags">
-                                        <span class="project-tag"
-                                            >WordPress</span
-                                        >
-                                        <span class="project-tag"
-                                            >Elementor</span
-                                        >
-                                        <span class="project-tag"
-                                            >WooCommerce</span
-                                        >
-                                        <span class="project-tag">+4</span>
+                                        <span class="project-tag">Xampp</span>
+                                        <span class="project-tag">PHP</span>
+                                        <span class="project-tag">MySQL</span>
                                     </div>
 
                                     <a href="#" class="project-link">
@@ -373,7 +373,7 @@
                                 <div class="project-image-container">
                                     <img
                                         src="https://placehold.co/600x400/222/fff?text=Another+Project"
-                                        alt="Another Project"
+                                        alt="Inventory Management System"
                                         class="project-image"
                                     />
                                     <div class="project-badge">
@@ -382,184 +382,18 @@
                                 </div>
                                 <div class="project-content">
                                     <h3 class="project-card-title">
-                                        Another Project
+                                        Inventory Management System
                                     </h3>
                                     <p class="project-card-description">
-                                        A mobile application built with React
-                                        Native and Firebase for real-time data
-                                        synchronization...
+                                        Developed an inventory management system
+                                        for recording products and tracking
+                                        stock levels to reduce manual work and
+                                        improve accuracy.
                                     </p>
 
                                     <div class="project-tags">
-                                        <span class="project-tag"
-                                            >React Native</span
-                                        >
-                                        <span class="project-tag"
-                                            >Firebase</span
-                                        >
-                                        <span class="project-tag">Redux</span>
-                                    </div>
-
-                                    <a href="#" class="project-link">
-                                        <span>View Project</span>
-                                        <i
-                                            class="fa-solid fa-arrow-up-right"
-                                        ></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Slide 5 -->
-                        <div class="swiper-slide">
-                            <div class="project-card">
-                                <div class="project-image-container">
-                                    <img
-                                        src="https://placehold.co/600x400/222/fff?text=TaskFlow+Dashboard"
-                                        alt="TaskFlow Dashboard"
-                                        class="project-image"
-                                    />
-                                    <div class="project-badge">Web App</div>
-                                </div>
-                                <div class="project-content">
-                                    <h3 class="project-card-title">
-                                        TaskFlow Dashboard
-                                    </h3>
-                                    <p class="project-card-description">
-                                        A productivity dashboard for managing
-                                        tasks, deadlines, and team progress with
-                                        clean visual analytics...
-                                    </p>
-
-                                    <div class="project-tags">
-                                        <span class="project-tag">React</span>
-                                        <span class="project-tag"
-                                            >TypeScript</span
-                                        >
-                                        <span class="project-tag"
-                                            >Supabase</span
-                                        >
-                                        <span class="project-tag">+2</span>
-                                    </div>
-
-                                    <a href="#" class="project-link">
-                                        <span>View Project</span>
-                                        <i
-                                            class="fa-solid fa-arrow-up-right"
-                                        ></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Slide 6 -->
-                        <div class="swiper-slide">
-                            <div class="project-card">
-                                <div class="project-image-container">
-                                    <img
-                                        src="https://placehold.co/600x400/222/fff?text=Travel+Booking+UI"
-                                        alt="Travel Booking UI"
-                                        class="project-image"
-                                    />
-                                    <div class="project-badge">Frontend</div>
-                                </div>
-                                <div class="project-content">
-                                    <h3 class="project-card-title">
-                                        Travel Booking UI
-                                    </h3>
-                                    <p class="project-card-description">
-                                        A responsive booking interface with
-                                        destination search, date selection, and
-                                        dynamic price cards for users...
-                                    </p>
-
-                                    <div class="project-tags">
-                                        <span class="project-tag">HTML</span>
-                                        <span class="project-tag">CSS</span>
-                                        <span class="project-tag"
-                                            >JavaScript</span
-                                        >
-                                        <span class="project-tag">+1</span>
-                                    </div>
-
-                                    <a href="#" class="project-link">
-                                        <span>View Project</span>
-                                        <i
-                                            class="fa-solid fa-arrow-up-right"
-                                        ></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Slide 7 -->
-                        <div class="swiper-slide">
-                            <div class="project-card">
-                                <div class="project-image-container">
-                                    <img
-                                        src="https://placehold.co/600x400/222/fff?text=FitTrack+Mobile"
-                                        alt="FitTrack Mobile"
-                                        class="project-image"
-                                    />
-                                    <div class="project-badge">Mobile App</div>
-                                </div>
-                                <div class="project-content">
-                                    <h3 class="project-card-title">
-                                        FitTrack Mobile
-                                    </h3>
-                                    <p class="project-card-description">
-                                        A fitness tracker app concept with daily
-                                        activity logs, personalized goals, and
-                                        progress charts for users...
-                                    </p>
-
-                                    <div class="project-tags">
-                                        <span class="project-tag"
-                                            >React Native</span
-                                        >
-                                        <span class="project-tag">Expo</span>
-                                        <span class="project-tag"
-                                            >Firebase</span
-                                        >
-                                        <span class="project-tag">+2</span>
-                                    </div>
-
-                                    <a href="#" class="project-link">
-                                        <span>View Project</span>
-                                        <i
-                                            class="fa-solid fa-arrow-up-right"
-                                        ></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Slide 8 -->
-                        <div class="swiper-slide">
-                            <div class="project-card">
-                                <div class="project-image-container">
-                                    <img
-                                        src="https://placehold.co/600x400/222/fff?text=Portfolio+CMS"
-                                        alt="Portfolio CMS"
-                                        class="project-image"
-                                    />
-                                    <div class="project-badge">Backend</div>
-                                </div>
-                                <div class="project-content">
-                                    <h3 class="project-card-title">
-                                        Portfolio CMS
-                                    </h3>
-                                    <p class="project-card-description">
-                                        A lightweight content management system
-                                        for portfolio websites with project
-                                        CRUD, media upload, and auth...
-                                    </p>
-
-                                    <div class="project-tags">
-                                        <span class="project-tag">Node.js</span>
-                                        <span class="project-tag">Express</span>
-                                        <span class="project-tag">MongoDB</span>
-                                        <span class="project-tag">+3</span>
+                                        <span class="project-tag">C#</span>
+                                        <span class="project-tag">MySQL</span>
                                     </div>
 
                                     <a href="#" class="project-link">
@@ -1006,7 +840,7 @@
             </div>
         </section>
         <hr />
-        <section class="testimonials"></section>
+        <!-- <section class="testimonials"></section> -->
         <hr />
         <section id="contact" class="contact">
             <div class="cf-wrapper">
@@ -1023,35 +857,20 @@
                         method="POST"
                         class="cf-form"
                     >
-                        <!-- First Name & Last Name -->
                         <div class="cf-row">
                             <div class="cf-field">
-                                <label for="firstname" class="cf-label"
-                                    >First Name</label
+                                <label for="fullname" class="cf-label"
+                                    >Full Name</label
                                 >
                                 <input
                                     type="text"
-                                    name="firstname"
-                                    id="firstname"
-                                    placeholder="John"
-                                    class="cf-input"
-                                />
-                            </div>
-                            <div class="cf-field">
-                                <label for="lastname" class="cf-label"
-                                    >Last Name</label
-                                >
-                                <input
-                                    type="text"
-                                    name="lastname"
-                                    id="lastname"
-                                    placeholder="Doe"
+                                    name="fullname"
+                                    id="fullname"
+                                    placeholder="John Doe"
                                     class="cf-input"
                                 />
                             </div>
                         </div>
-
-                        <!-- Email & Phone -->
                         <div class="cf-row">
                             <div class="cf-field">
                                 <label for="email" class="cf-label"
@@ -1065,68 +884,23 @@
                                     class="cf-input"
                                 />
                             </div>
+                        </div>
+
+                        <div class="cf-row">
                             <div class="cf-field">
-                                <label for="phone" class="cf-label"
-                                    >Phone</label
+                                <label for="message" class="cf-label"
+                                    >Message</label
                                 >
-                                <input
-                                    type="text"
-                                    name="phone"
-                                    id="phone"
-                                    placeholder="(319) 555-0115"
-                                    class="cf-input"
-                                />
+                                <textarea
+                                    rows="4"
+                                    name="message"
+                                    id="message"
+                                    placeholder="Write your message..."
+                                    class="cf-input cf-textarea"
+                                ></textarea>
                             </div>
                         </div>
-
-                        <!-- Message -->
-                        <div class="cf-field cf-field--full">
-                            <label for="message" class="cf-label"
-                                >Message</label
-                            >
-                            <textarea
-                                rows="6"
-                                name="message"
-                                id="message"
-                                placeholder="Write your message..."
-                                class="cf-input cf-textarea"
-                            ></textarea>
-                        </div>
-
-                        <!-- Attach & Submit -->
                         <div class="cf-bottom">
-                            <label for="upload" class="cf-attach">
-                                <svg
-                                    width="16"
-                                    height="16"
-                                    viewBox="0 0 20 20"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <g clip-path="url(#clip0_1670_1531)">
-                                        <path
-                                            d="M12.3568 6.4644L7.64349 11.1786C7.5639 11.2554 7.50041 11.3474 7.45674 11.4491C7.41307 11.5507 7.39008 11.6601 7.38912 11.7707C7.38815 11.8814 7.40924 11.9911 7.45114 12.0935C7.49304 12.1959 7.55492 12.289 7.63316 12.3672C7.71141 12.4455 7.80445 12.5073 7.90686 12.5492C8.00928 12.5912 8.11901 12.6122 8.22966 12.6113C8.34031 12.6103 8.44966 12.5873 8.55133 12.5436C8.653 12.5 8.74495 12.4365 8.82182 12.3569L13.536 7.64356C14.0049 7.17468 14.2683 6.53875 14.2683 5.87565C14.2683 5.21255 14.0049 4.57661 13.536 4.10773C13.0671 3.63885 12.4312 3.37544 11.7681 3.37544C11.105 3.37544 10.469 3.63885 10.0002 4.10773L5.28599 8.8219C4.89105 9.20701 4.57652 9.6667 4.36062 10.1743C4.14473 10.6819 4.03178 11.2274 4.02832 11.779C4.02487 12.3306 4.13097 12.8774 4.34049 13.3877C4.55 13.8979 4.85876 14.3615 5.24884 14.7516C5.63892 15.1416 6.10256 15.4503 6.61287 15.6597C7.12318 15.8692 7.67 15.9752 8.2216 15.9717C8.77321 15.9681 9.31862 15.8551 9.82621 15.6391C10.3338 15.4232 10.7934 15.1086 11.1785 14.7136L15.8927 10.0002L17.071 11.1786L12.3568 15.8927C11.8151 16.4344 11.172 16.8641 10.4643 17.1573C9.75649 17.4505 8.99791 17.6014 8.23182 17.6014C7.46574 17.6014 6.70716 17.4505 5.99939 17.1573C5.29162 16.8641 4.64853 16.4344 4.10682 15.8927C3.56512 15.351 3.13542 14.7079 2.84225 14.0002C2.54908 13.2924 2.39819 12.5338 2.39819 11.7677C2.39819 11.0016 2.54908 10.2431 2.84225 9.5353C3.13542 8.82753 3.56512 8.18443 4.10682 7.64273L8.82182 2.9294C9.60767 2.17041 10.6602 1.75043 11.7527 1.75992C12.8451 1.76942 13.8902 2.20762 14.6627 2.98015C15.4353 3.75269 15.8735 4.79774 15.883 5.89023C15.8925 6.98271 15.4725 8.03522 14.7135 8.82106L10.0002 13.5369C9.76794 13.7691 9.49226 13.9532 9.18887 14.0788C8.88548 14.2045 8.56032 14.2691 8.23195 14.2691C7.90357 14.269 7.57843 14.2043 7.27507 14.0786C6.97171 13.9529 6.69607 13.7687 6.46391 13.5365C6.23174 13.3043 6.04759 13.0286 5.92196 12.7252C5.79633 12.4218 5.7317 12.0966 5.73173 11.7683C5.73177 11.4399 5.79649 11.1148 5.92219 10.8114C6.04788 10.508 6.2321 10.2324 6.46432 10.0002L11.1785 5.28606L12.3568 6.4644Z"
-                                            fill="#000"
-                                        />
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_1670_1531">
-                                            <rect
-                                                width="20"
-                                                height="20"
-                                                fill="white"
-                                            />
-                                        </clipPath>
-                                    </defs>
-                                </svg>
-                                Attach File
-                                <input
-                                    type="file"
-                                    id="upload"
-                                    name="upload"
-                                    class="cf-file-hidden"
-                                />
-                            </label>
                             <button type="submit" class="cf-submit">
                                 Send Message &rarr;
                             </button>

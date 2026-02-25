@@ -16,6 +16,46 @@ requestAnimationFrame(raf);
 let revealObserver = null;
 
 document.addEventListener('DOMContentLoaded', function () {
+    // Hamburger menu toggle
+    const hamburger =
+        document.getElementById('hamburger') ||
+        document.querySelector('.hamburger');
+    const navLinks =
+        document.getElementById('navLinks') ||
+        document.querySelector('.navigation-link');
+    const navOverlay =
+        document.getElementById('navOverlay') ||
+        document.querySelector('.nav-overlay');
+
+    function openNav() {
+        navLinks.classList.add('nav-open');
+        navOverlay.classList.add('is-visible');
+        hamburger.classList.add('is-open');
+        hamburger.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeNav() {
+        navLinks.classList.remove('nav-open');
+        navOverlay.classList.remove('is-visible');
+        hamburger.classList.remove('is-open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+    }
+
+    if (hamburger && navLinks && navOverlay) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.contains('is-open') ? closeNav() : openNav();
+        });
+        navOverlay.addEventListener('click', closeNav);
+        navLinks.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', closeNav);
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeNav();
+        });
+    }
+
     if (
         typeof Swiper !== 'undefined' &&
         document.querySelector('.projectSwiper')

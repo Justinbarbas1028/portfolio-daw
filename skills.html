@@ -17,16 +17,27 @@
         />
     </head>
     <body>
-        <nav class="main-nav">
-            <div class="logo">Logo Here</div>
-            <div class="navigation-link">
+        <div class="nav-overlay" id="navOverlay"></div>
+        <nav class="main-nav nav-skills">
+            <div class="logo">JUSTIN</div>
+            <div class="navigation-link" id="navLinks">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="projects.html">Project</a>
-                <a href="skills.html">Skill</a>
+                <!-- <a href="skills.html">Skill</a> -->
                 <a href="tools.html">Tools</a>
                 <a href="contact.html">Contact</a>
             </div>
+            <button
+                class="hamburger"
+                id="hamburger"
+                aria-label="Toggle menu"
+                aria-expanded="false"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
 
         <section class="techstack">

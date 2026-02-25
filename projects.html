@@ -21,21 +21,34 @@
         />
     </head>
     <body>
-        <nav class="main-nav">
-            <div class="logo">Logo Here</div>
-            <div class="navigation-link">
+        <div class="nav-overlay" id="navOverlay"></div>
+        <nav class="main-nav nav-projects">
+            <div class="logo">JUSTIN</div>
+            <div class="navigation-link" id="navLinks">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="projects.html">Project</a>
-                <a href="skills.html">Skill</a>
+                <!-- <a href="skills.html">Skill</a> -->
                 <a href="tools.html">Tools</a>
                 <a href="contact.html">Contact</a>
             </div>
+            <button
+                class="hamburger"
+                id="hamburger"
+                aria-label="Toggle menu"
+                aria-expanded="false"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
 
         <section class="project-section-page">
             <div class="project-container">
-                <h2 class="project-title reveal">FEATURED PROJECTS</h2>
+                <h2 class="project-title reveal">
+                    FEATURED <span>PROJECTS</span>
+                </h2>
                 <p class="project-description reveal reveal-delay-1">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                     Eius similique neque ex. Molestias dignissimos, esse quis
@@ -50,22 +63,23 @@
                                 alt="Full Circle Event"
                                 class="project-image"
                             />
-                            <div class="project-badge">Web Development</div>
+                            <div class="project-badge">
+                                Mobile App Development
+                            </div>
                         </div>
                         <div class="project-content">
                             <h3 class="project-card-title">
-                                Full Circle Event
+                                Mobile Parenting Support Application
                             </h3>
                             <p class="project-card-description">
-                                A visually dynamic and fully responsive
-                                WordPress website for Sheffield's leading AV
-                                hire and event...
+                                Developed a mobile application that supports
+                                parents with childcare guidance, nutrition tips,
+                                and parent well-being resources.
                             </p>
                             <div class="project-tags">
-                                <span class="project-tag">WordPress</span>
-                                <span class="project-tag">Elementor</span>
-                                <span class="project-tag">HTML</span>
-                                <span class="project-tag">+4</span>
+                                <span class="project-tag">Dart</span>
+                                <span class="project-tag">Flutter</span>
+                                <span class="project-tag">Firebase</span>
                             </div>
                             <a href="#" class="project-link">
                                 <span>View Project</span>
@@ -83,17 +97,21 @@
                             <div class="project-badge">Web Development</div>
                         </div>
                         <div class="project-content">
-                            <h3 class="project-card-title">Icon Codes</h3>
+                            <h3 class="project-card-title">School Website</h3>
                             <p class="project-card-description">
-                                A modern and animated eCommerce website built
-                                with WPBakery and the Salient theme,
-                                specializin...
+                                Designed and developed a school website that
+                                provides essential school information,
+                                announcements, and academic details. Implemented
+                                student registration and login functionality,
+                                with a simple and intuitive interface to ensure
+                                ease of navigation for students and staff.
                             </p>
                             <div class="project-tags">
-                                <span class="project-tag">WordPress</span>
-                                <span class="project-tag">WooCommerce</span>
-                                <span class="project-tag">WPBakery</span>
-                                <span class="project-tag">+3</span>
+                                <span class="project-tag">HTML</span>
+                                <span class="project-tag">CSS</span>
+                                <span class="project-tag">JavaScript</span>
+                                <span class="project-tag">Python</span>
+                                <span class="project-tag">Django</span>
                             </div>
                             <a href="#" class="project-link">
                                 <span>View Project</span>
@@ -112,18 +130,17 @@
                         </div>
                         <div class="project-content">
                             <h3 class="project-card-title">
-                                Mullion Glass Studio
+                                Point of Sale (POS) System
                             </h3>
                             <p class="project-card-description">
-                                A colourful, artistic eCommerce WordPress
-                                website showcasing handmade fused glass art and
-                                creati...
+                                Built a food point of sale system to manage
+                                orders, calculate sales, and process payments
+                                efficiently.
                             </p>
                             <div class="project-tags">
-                                <span class="project-tag">WordPress</span>
-                                <span class="project-tag">Elementor</span>
-                                <span class="project-tag">WooCommerce</span>
-                                <span class="project-tag">+4</span>
+                                <span class="project-tag">Xampp</span>
+                                <span class="project-tag">PHP</span>
+                                <span class="project-tag">MySQL</span>
                             </div>
                             <a href="#" class="project-link">
                                 <span>View Project</span>
@@ -141,131 +158,19 @@
                             <div class="project-badge">App Development</div>
                         </div>
                         <div class="project-content">
-                            <h3 class="project-card-title">Another Project</h3>
-                            <p class="project-card-description">
-                                A mobile application built with React Native and
-                                Firebase for real-time data synchronization...
-                            </p>
-                            <div class="project-tags">
-                                <span class="project-tag">React Native</span>
-                                <span class="project-tag">Firebase</span>
-                                <span class="project-tag">Redux</span>
-                            </div>
-                            <a href="#" class="project-link">
-                                <span>View Project</span>
-                                <i class="fa-solid fa-arrow-up-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-image-container">
-                            <img
-                                src="https://placehold.co/600x400/222/fff?text=TaskFlow+Dashboard"
-                                alt="TaskFlow Dashboard"
-                                class="project-image"
-                            />
-                            <div class="project-badge">Web App</div>
-                        </div>
-                        <div class="project-content">
                             <h3 class="project-card-title">
-                                TaskFlow Dashboard
+                                Inventory Management System
                             </h3>
                             <p class="project-card-description">
-                                A productivity dashboard for managing tasks,
-                                deadlines, and team progress with clean visual
-                                analytics...
+                                Developed an inventory management system for
+                                recording products and tracking stock levels.
+                                The system reduces manual inventory work and
+                                improves accuracy in monitoring product
+                                availability.
                             </p>
                             <div class="project-tags">
-                                <span class="project-tag">React</span>
-                                <span class="project-tag">TypeScript</span>
-                                <span class="project-tag">Supabase</span>
-                                <span class="project-tag">+2</span>
-                            </div>
-                            <a href="#" class="project-link">
-                                <span>View Project</span>
-                                <i class="fa-solid fa-arrow-up-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-image-container">
-                            <img
-                                src="https://placehold.co/600x400/222/fff?text=Travel+Booking+UI"
-                                alt="Travel Booking UI"
-                                class="project-image"
-                            />
-                            <div class="project-badge">Frontend</div>
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-card-title">
-                                Travel Booking UI
-                            </h3>
-                            <p class="project-card-description">
-                                A responsive booking interface with destination
-                                search, date selection, and dynamic price cards
-                                for users...
-                            </p>
-                            <div class="project-tags">
-                                <span class="project-tag">HTML</span>
-                                <span class="project-tag">CSS</span>
-                                <span class="project-tag">JavaScript</span>
-                                <span class="project-tag">+1</span>
-                            </div>
-                            <a href="#" class="project-link">
-                                <span>View Project</span>
-                                <i class="fa-solid fa-arrow-up-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-image-container">
-                            <img
-                                src="https://placehold.co/600x400/222/fff?text=FitTrack+Mobile"
-                                alt="FitTrack Mobile"
-                                class="project-image"
-                            />
-                            <div class="project-badge">Mobile App</div>
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-card-title">FitTrack Mobile</h3>
-                            <p class="project-card-description">
-                                A fitness tracker app concept with daily
-                                activity logs, personalized goals, and progress
-                                charts for users...
-                            </p>
-                            <div class="project-tags">
-                                <span class="project-tag">React Native</span>
-                                <span class="project-tag">Expo</span>
-                                <span class="project-tag">Firebase</span>
-                                <span class="project-tag">+2</span>
-                            </div>
-                            <a href="#" class="project-link">
-                                <span>View Project</span>
-                                <i class="fa-solid fa-arrow-up-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-image-container">
-                            <img
-                                src="https://placehold.co/600x400/222/fff?text=Portfolio+CMS"
-                                alt="Portfolio CMS"
-                                class="project-image"
-                            />
-                            <div class="project-badge">Backend</div>
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-card-title">Portfolio CMS</h3>
-                            <p class="project-card-description">
-                                A lightweight content management system for
-                                portfolio websites with project CRUD, media
-                                upload, and auth...
-                            </p>
-                            <div class="project-tags">
-                                <span class="project-tag">Node.js</span>
-                                <span class="project-tag">Express</span>
-                                <span class="project-tag">MongoDB</span>
-                                <span class="project-tag">+3</span>
+                                <span class="project-tag">C#</span>
+                                <span class="project-tag">MySQL</span>
                             </div>
                             <a href="#" class="project-link">
                                 <span>View Project</span>
